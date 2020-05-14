@@ -1,0 +1,121 @@
+page{
+    background-color: #dedede;
+}
+.userInfo_Login {
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: pink;
+    .userInfo_wrap {  
+        height: 100%;
+      .bgImg {
+        height: 100%;
+        filter: blur(10rpx);
+        image {
+            height: 100%;
+        }
+      }
+  
+      .userInfo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top:30%;
+        text-align: center;
+        width: 40vw;
+        .smImg {
+            image {
+                width: 20vw;
+                height: 20vw;
+                border-radius: 50%;
+          }
+        }  
+        .username {
+            font-size: 32rpx;
+        }
+      }
+    }
+  
+    navigator {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%),;
+        width:30vw;
+        line-height:70rpx;
+        border: 1rpx solid var(--themeColor);
+        text-align: center;
+    }
+  }
+
+  .user_content{
+      font-size: 32rpx;
+    position: relative;
+    .user_main{
+      padding-bottom: 100rpx;
+      color: #666;
+      position: absolute;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      top:-40rpx;
+  
+      .history_wrap{
+        background-color: #fff;
+        display: flex;
+        navigator{
+          flex: 1;
+          text-align: center;
+          padding: 10rpx 0;
+          .his_num{
+            color: var(--themeColor);
+          }
+          .his_name{}
+        }
+      }
+      .orders_wrap{
+        background-color: #fff;
+        margin-top: 30rpx;
+        .orders_title{
+          padding: 20rpx;
+          border-bottom: 1rpx solid #ccc;
+        }
+        .order_content{
+          display: flex;
+          navigator{
+            padding: 15rpx 0;
+            flex: 1;
+            text-align: center;
+            .iconfont{
+              color: var(--themeColor);
+              font-size: 40rpx;
+            }
+            .order_name{}
+          }
+        }
+      }
+      .address_wrap{
+        margin-top: 30rpx;
+        background-color: #fff;
+        padding: 20rpx ;
+      }
+      .app_info_wrap{
+        margin-top: 30rpx;
+        background-color: #fff;
+        .app_info_item{
+          padding: 20rpx ;
+          border-bottom: 1rpx solid #ccc;
+        }
+        .app_info_contact{
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .recommend_wrap{
+        margin-top: 30rpx;
+        background-color: #fff;
+        padding: 20rpx ;
+      }
+    }
+  }

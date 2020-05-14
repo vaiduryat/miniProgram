@@ -1,0 +1,73 @@
+<view class="cart_address_row">
+	<view class="address_btn" wx:if="{{!address.userName}}">
+		<button type='primary' plain bind:tap='handleAddAddress'>添加收货地址</button>
+	</view>
+	<view class="address_info" wx:else>
+		<view class="info_left">
+			<view class="name">
+				{{address.userName}}
+			</view>
+			<view class="address">
+				{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}
+			</view>
+		</view>
+		<view class="info_right">
+			{{address.telNumber}}
+		</view>
+	</view>
+
+</view>
+
+<view class='cart'>
+	<view class="cart_title">购物车</view>
+	<view class="cart_content">
+		  <block wx:if="{{cart.length>0}}">
+		  	<view class="cart_item" wx:for="{{cart}}" wx:key="*this">
+				<view class="item_left">
+                <checkbox-group bindchange="handleCheckboxChange" data-id="{{item.goods_id}}">
+                    <checkbox checked="{{item.isChecked}}"></checkbox>
+                </checkbox-group>  
+				</view>
+				<view class="item_middle">
+                <image class="" src="{{item.pics[0].pics_mid}}" mode="widthFix" />                  
+				</view>
+				<view class="item_right">
+				<view class="goods_name">{{item.goods_name}}</view>
+				<view class="goods_price_count">
+					<view class="price">￥{{item.goods_price}}</view>
+					<view class="count">
+                        <view bind:tap="handleChangeNum" data-id="{{item.goods_id}}" data-operation="{{-1}}">-</view>
+                        <view class="count_n">{{item.num}}</view>
+                        <view bind:tap="handleChangeNum" data-id="{{item.goods_id}}" data-operation="{{1}}">+</view>
+					</view>
+				</view>
+				</view>
+			</view>
+		</block>
+		<block wx:else>
+			<image class="" src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" mode="widthFix"/>
+		</block>  
+	</view>
+</view>
+
+<view class="cart_footer">
+    <view class="left">
+        <checkbox-group bindchange="handleItemAllChecked">
+            <checkbox  color="" checked="{{checkedAll}}">    
+            </checkbox>
+                
+        </checkbox-group>
+         全选 
+    </view>
+    <view class="middle">
+        <view class="heji_price">
+            <view class="heji">合计</view>
+            <view class="price">￥{{totlePrice}}</view>
+        </view>
+        <view class="yunfeo">含运费</view>
+    </view>
+    <view class="right" bind:tap="handlePay">
+        结算({{totleNum}})
+    </view>
+</view>
+  

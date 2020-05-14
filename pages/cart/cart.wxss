@@ -1,0 +1,123 @@
+page {
+  padding-bottom: 90rpx;
+}
+.cart_address_row .address_btn {
+  padding: 20rpx;
+}
+.cart_address_row .address_btn button {
+  font-size: 300;
+}
+.cart_address_row .address_info {
+  padding: 15rpx;
+  font-size: 26rpx;
+  display: flex;
+}
+.cart_address_row .address_info .info_left {
+  flex: 5;
+}
+.cart_address_row .address_info .info_right {
+  flex: 3;
+  text-align: right;
+}
+.cart .cart_title {
+  border: 3rpx solid var(--themeColor);
+  color: var(--themeColor);
+  padding: 20rpx 15rpx;
+}
+.cart .cart_content .cart_item {
+  display: flex;
+  height: 160rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.cart .cart_content .cart_item .item_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.cart .cart_content .cart_item .item_middle {
+  flex: 2;
+}
+.cart .cart_content .cart_item .item_middle image {
+  width: 80%;
+}
+.cart .cart_content .cart_item .item_right {
+  padding: 10rpx 15rpx 10rpx 0;
+  height: 100%;
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart .cart_content .cart_item .item_right .goods_name {
+  color: #666;
+  font-size: 26rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart .cart_content .cart_item .item_right .goods_price_count {
+  display: flex;
+  justify-content: space-between;
+}
+.cart .cart_content .cart_item .item_right .goods_price_count .price {
+  color: var(--themeColor);
+}
+.cart .cart_content .cart_item .item_right .goods_price_count .count {
+  display: flex;
+}
+.cart .cart_content .cart_item .item_right .goods_price_count .count view {
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50rpx;
+  width: 50rpx;
+  border: 1rpx solid #ccc;
+}
+.cart .cart_content .cart_item .item_right .goods_price_count .count .count_n {
+  border: none;
+}
+.cart_footer {
+  border-top: solid 1rpx #ccc;
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  font-size: 30rpx;
+}
+.cart_footer .left {
+  padding-left: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+.cart_footer .middle {
+  padding-right: 20rpx;
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.cart_footer .middle .heji_price {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.cart_footer .middle .heji_price .price {
+  color: var(--themeColor);
+  font-weight: 600;
+}
+.cart_footer .right {
+  color: #fff;
+  background-color: var(--themeColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
+}
